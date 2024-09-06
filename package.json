@@ -5,9 +5,15 @@
   "main": "cli.js",
   "type": "module",
   "bin": {
-    "gh-easy-cli": "./cli.js"
+    "gh-easy-cli": "./bin/cli.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "inquirer": "^10.2.0"
+  }
 }
