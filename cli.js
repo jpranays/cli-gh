@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 import { program } from "commander";
-import { listRepositories, createRepository } from "../src/commands/repo.js";
-import { getUserInfo } from "../src/commands/user.js";
-import { login, logout } from "../src/commands/auth.js";
+import { listRepositories, createRepository } from "./src/commands/repo.js";
+import { getUserInfo } from "./src/commands/user.js";
+import { login, logout } from "./src/commands/auth.js";
 
 program.version("1.0.0").description("GitHub CLI Tool");
 

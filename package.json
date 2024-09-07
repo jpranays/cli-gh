@@ -1,11 +1,11 @@
 {
   "name": "gh-easy-cli",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "",
   "main": "cli.js",
   "type": "module",
   "bin": {
-    "gh-easy-cli": "./bin/cli.js"
+    "gh-easy-cli": "cli.js"
   },
   "keywords": [],
   "author": "",
