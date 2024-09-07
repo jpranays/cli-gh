@@ -1,12 +1,9 @@
 import inquirer from "inquirer";
 import axios from "axios";
-import { writeConfig } from "../utils/config.js";
+import { writeConfig, readConfig } from "../utils/config.js";
 import chalk from "chalk";
-import fs from "fs";
-import path from "path";
 
-const configPath = path.resolve("config/config.json");
-
+// Login command to store GitHub credentials
 export const login = async () => {
 	const { token } = await inquirer.prompt([
 		{
@@ -32,10 +29,12 @@ export const login = async () => {
 	}
 };
 
+// Logout command to remove GitHub credentials
 export const logout = async () => {
 	try {
-		if (fs.existsSync(configPath)) {
-			fs.writeFileSync(configPath, JSON.stringify({}, null, 2), "utf8");
+		const config = readConfig();
+		if (config.githubToken) {
+			writeConfig({});
 			console.log(chalk.green("Successfully logged out!"));
 		} else {
 			console.log(chalk.red("No login information found."));
