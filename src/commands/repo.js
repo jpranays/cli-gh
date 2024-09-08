@@ -53,6 +53,101 @@ export const createRepository = async () => {
 		}
 	}
 };
+export const updateRepository = async () => {
+	try {
+		const answers = await inquirer.prompt([
+			{
+				name: "owner",
+				message: "Enter the GitHub username (owner of the repository):",
+				validate: (input) => (input ? true : "Owner username is required."),
+			},
+			{
+				name: "repo",
+				message: "Enter the repository name:",
+				validate: (input) => (input ? true : "Repository name is required."),
+			},
+			{
+				name: "name",
+				message:
+					"Enter the new name for the repository (leave blank to keep current name):",
+			},
+			{
+				name: "description",
+				message:
+					"Enter the new description for the repository (leave blank to keep current description):",
+			},
+			{
+				name: "homepage",
+				message:
+					"Enter the new homepage URL for the repository (leave blank to keep current URL):",
+			},
+			{
+				type: "confirm",
+				name: "isPrivate",
+				message: "Should the repository be private?",
+				default: false,
+			},
+			{
+				type: "confirm",
+				name: "hasIssues",
+				message: "Should issues be enabled?",
+				default: true,
+			},
+			{
+				type: "confirm",
+				name: "hasWiki",
+				message: "Should the wiki be enabled?",
+				default: true,
+			},
+			{
+				type: "confirm",
+				name: "hasProjects",
+				message: "Should projects be enabled?",
+				default: true,
+			},
+			{
+				name: "defaultBranch",
+				message:
+					"Enter the name of the default branch (leave blank to keep current branch):",
+			},
+		]);
+
+		const {
+			owner,
+			repo,
+			name,
+			description,
+			homepage,
+			isPrivate,
+			hasIssues,
+			hasWiki,
+			hasProjects,
+			defaultBranch,
+		} = answers;
+
+		const data = {};
+		if (name) data.name = name;
+		if (description) data.description = description;
+		if (homepage) data.homepage = homepage;
+		data.private = isPrivate;
+		data.has_issues = hasIssues;
+		data.has_wiki = hasWiki;
+		data.has_projects = hasProjects;
+		if (defaultBranch) data.default_branch = defaultBranch;
+
+		const response = await api.patch(`/repos/${owner}/${repo}`, data);
+
+		if (response.status === 200) {
+			console.log(chalk.green(`Repository '${repo}' updated successfully!`));
+		}
+	} catch (error) {
+		if (error.response) {
+			console.error(chalk.red(`Error: ${error.response.data.message}`));
+		} else {
+			console.error(chalk.red(`Error: ${error.message}`));
+		}
+	}
+};
 
 export const deleteRepository = async () => {
 	try {
@@ -275,6 +370,65 @@ export const getRepositoryInfo = async () => {
 	}
 };
 
+export const listActions = async () => {
+	try {
+		const answers = await inquirer.prompt([
+			{
+				name: "owner",
+				message: "Enter the GitHub username (owner of the repository):",
+				validate: (input) => (input ? true : "Owner username is required."),
+			},
+			{
+				name: "repo",
+				message: "Enter the repository name:",
+				validate: (input) => (input ? true : "Repository name is required."),
+			},
+		]);
+
+		const { data } = await api.get(
+			`/repos/${answers.owner}/${answers.repo}/actions/workflows`
+		);
+		console.log(chalk.blue("GitHub Actions Workflows:"));
+		data.workflows.forEach((workflow) => {
+			console.log(chalk.green(workflow.name), "-", workflow.state);
+		});
+	} catch (error) {
+		console.error(chalk.red("Error fetching workflows:"), error.message);
+	}
+};
+
+export const getRepositoryTraffic = async () => {
+	try {
+		const answers = await inquirer.prompt([
+			{
+				name: "owner",
+				message: "Enter the GitHub username (owner of the repository):",
+				validate: (input) => (input ? true : "Owner username is required."),
+			},
+			{
+				name: "repo",
+				message: "Enter the repository name:",
+				validate: (input) => (input ? true : "Repository name is required."),
+			},
+		]);
+
+		const { owner, repo } = answers;
+
+		const response = await api.get(`/repos/${owner}/${repo}/traffic/views`);
+		const { data } = response;
+
+		console.log(`Traffic Data for ${repo}:`);
+		console.log(`Total Views: ${data.count}`);
+		console.log(`Unique Views: ${data.uniques}`);
+	} catch (error) {
+		if (error.response) {
+			console.error(chalk.red(`Error: ${error.response.data.message}`));
+		} else {
+			console.error(chalk.red(`Error: ${error.message}`));
+		}
+	}
+};
+
 export const listRepositoryIssues = async () => {
 	try {
 		const answers = await inquirer.prompt([
@@ -324,6 +478,48 @@ export const listRepositoryIssues = async () => {
 		}
 	}
 };
+export const getIssueInfo = async () => {
+	try {
+		const answers = await inquirer.prompt([
+			{
+				name: "owner",
+				message: "Enter the GitHub username (owner of the repository):",
+				validate: (input) => (input ? true : "Owner username is required."),
+			},
+			{
+				name: "repo",
+				message: "Enter the repository name:",
+				validate: (input) => (input ? true : "Repository name is required."),
+			},
+			{
+				name: "issueNumber",
+				message: "Enter the issue number:",
+				validate: (input) => (input ? true : "Issue number is required."),
+			},
+		]);
+
+		const { owner, repo, issueNumber } = answers;
+		const response = await api.get(
+			`/repos/${owner}/${repo}/issues/${issueNumber}`
+		);
+
+		if (response.status === 200) {
+			console.log(`Issue #${response.data.number}: ${response.data.title}`);
+			console.log(`State: ${response.data.state}`);
+			console.log(`Created At: ${response.data.created_at}`);
+			console.log(`Updated At: ${response.data.updated_at}`);
+			console.log(`User: ${response.data.user.login}`);
+			console.log(`Description: ${response.data.body}`);
+		}
+	} catch (error) {
+		if (error.response) {
+			console.error(chalk.red(`Error: ${error.response.data.message}`));
+		} else {
+			console.error(chalk.red(`Error: ${error.message}`));
+		}
+	}
+};
+
 export const createIssue = async () => {
 	try {
 		const answers = await inquirer.prompt([
@@ -359,6 +555,66 @@ export const createIssue = async () => {
 			console.log(
 				chalk.green(`Issue '${response.data.title}' created successfully!`)
 			);
+		}
+	} catch (error) {
+		if (error.response) {
+			console.error(chalk.red(`Error: ${error.response.data.message}`));
+		} else {
+			console.error(chalk.red(`Error: ${error.message}`));
+		}
+	}
+};
+export const updateIssue = async () => {
+	try {
+		const answers = await inquirer.prompt([
+			{
+				name: "owner",
+				message: "Enter the GitHub username (owner of the repository):",
+				validate: (input) => (input ? true : "Owner username is required."),
+			},
+			{
+				name: "repo",
+				message: "Enter the repository name:",
+				validate: (input) => (input ? true : "Repository name is required."),
+			},
+			{
+				name: "issueNumber",
+				message: "Enter the issue number:",
+				validate: (input) => (input ? true : "Issue number is required."),
+			},
+			{
+				name: "title",
+				message:
+					"Enter the new title for the issue (leave blank to keep current title):",
+			},
+			{
+				name: "body",
+				message:
+					"Enter the new body text for the issue (leave blank to keep current body):",
+			},
+			{
+				name: "state",
+				message:
+					"Enter the new state of the issue (open/closed, leave blank to keep current state):",
+				validate: (input) =>
+					["open", "closed", ""].includes(input) ? true : "Invalid state.",
+			},
+		]);
+
+		const { owner, repo, issueNumber, title, body, state } = answers;
+
+		const data = {};
+		if (title) data.title = title;
+		if (body) data.body = body;
+		if (state) data.state = state;
+
+		const response = await api.patch(
+			`/repos/${owner}/${repo}/issues/${issueNumber}`,
+			data
+		);
+
+		if (response.status === 200) {
+			console.log(chalk.green(`Issue #${issueNumber} updated successfully!`));
 		}
 	} catch (error) {
 		if (error.response) {
@@ -447,6 +703,50 @@ export const listRepositoryPullRequests = async () => {
 		}
 	}
 };
+
+export const getPrInfo = async () => {
+	try {
+		const answers = await inquirer.prompt([
+			{
+				name: "owner",
+				message: "Enter the GitHub username (owner of the repository):",
+				validate: (input) => (input ? true : "Owner username is required."),
+			},
+			{
+				name: "repo",
+				message: "Enter the repository name:",
+				validate: (input) => (input ? true : "Repository name is required."),
+			},
+			{
+				name: "prNumber",
+				message: "Enter the pull request number:",
+				validate: (input) =>
+					input ? true : "Pull request number is required.",
+			},
+		]);
+
+		const { owner, repo, prNumber } = answers;
+		const response = await api.get(`/repos/${owner}/${repo}/pulls/${prNumber}`);
+
+		if (response.status === 200) {
+			console.log(
+				`Pull Request #${response.data.number}: ${response.data.title}`
+			);
+			console.log(`State: ${response.data.state}`);
+			console.log(`Created At: ${response.data.created_at}`);
+			console.log(`Updated At: ${response.data.updated_at}`);
+			console.log(`User: ${response.data.user.login}`);
+			console.log(`Description: ${response.data.body}`);
+		}
+	} catch (error) {
+		if (error.response) {
+			console.error(chalk.red(`Error: ${error.response.data.message}`));
+		} else {
+			console.error(chalk.red(`Error: ${error.message}`));
+		}
+	}
+};
+
 export const createPullRequest = async () => {
 	try {
 		const answers = await inquirer.prompt([
@@ -544,6 +844,284 @@ export const mergePullRequest = async () => {
 		if (response.status === 200) {
 			console.log(
 				chalk.green(`Pull request #${pull_number} merged successfully!`)
+			);
+		}
+	} catch (error) {
+		if (error.response) {
+			console.error(chalk.red(`Error: ${error.response.data.message}`));
+		} else {
+			console.error(chalk.red(`Error: ${error.message}`));
+		}
+	}
+};
+export const addCollaborator = async () => {
+	try {
+		const answers = await inquirer.prompt([
+			{
+				name: "owner",
+				message: "Enter the GitHub username (owner of the repository):",
+				validate: (input) => (input ? true : "Owner username is required."),
+			},
+			{
+				name: "repo",
+				message: "Enter the repository name:",
+				validate: (input) => (input ? true : "Repository name is required."),
+			},
+			{
+				name: "collaborator",
+				message: "Enter the username of the collaborator to add:",
+				validate: (input) =>
+					input ? true : "Collaborator username is required.",
+			},
+			{
+				name: "permission",
+				message:
+					"Enter the permission level (admin, write, read) for the collaborator:",
+				type: "list",
+				choices: ["admin", "write", "read"],
+				default: "write",
+			},
+		]);
+
+		const { owner, repo, collaborator, permission } = answers;
+
+		const response = await api.put(
+			`/repos/${owner}/${repo}/collaborators/${collaborator}`,
+			{ permission }
+		);
+
+		if (response.status === 201) {
+			console.log(
+				chalk.green(
+					`Successfully added ${collaborator} as a collaborator to the repository '${repo}' with ${permission} permission!`
+				)
+			);
+		}
+	} catch (error) {
+		if (error.response) {
+			console.error(chalk.red(`Error: ${error.response.data.message}`));
+		} else {
+			console.error(chalk.red(`Error: ${error.message}`));
+		}
+	}
+};
+
+export const removeCollaborator = async () => {
+	try {
+		const answers = await inquirer.prompt([
+			{
+				name: "owner",
+				message: "Enter the GitHub username (owner of the repository):",
+				validate: (input) => (input ? true : "Owner username is required."),
+			},
+			{
+				name: "repo",
+				message: "Enter the repository name:",
+				validate: (input) => (input ? true : "Repository name is required."),
+			},
+			{
+				name: "collaborator",
+				message: "Enter the username of the collaborator to remove:",
+				validate: (input) =>
+					input ? true : "Collaborator username is required.",
+			},
+		]);
+
+		const { owner, repo, collaborator } = answers;
+
+		const response = await api.delete(
+			`/repos/${owner}/${repo}/collaborators/${collaborator}`
+		);
+
+		if (response.status === 204) {
+			console.log(
+				chalk.green(
+					`Successfully removed ${collaborator} from the repository '${repo}'.`
+				)
+			);
+		}
+	} catch (error) {
+		if (error.response) {
+			console.error(chalk.red(`Error: ${error.response.data.message}`));
+		} else {
+			console.error(chalk.red(`Error: ${error.message}`));
+		}
+	}
+};
+export const listCollaborators = async () => {
+	try {
+		const answers = await inquirer.prompt([
+			{
+				name: "owner",
+				message: "Enter the GitHub username (owner of the repository):",
+				validate: (input) => (input ? true : "Owner username is required."),
+			},
+			{
+				name: "repo",
+				message: "Enter the repository name:",
+				validate: (input) => (input ? true : "Repository name is required."),
+			},
+		]);
+
+		const { owner, repo } = answers;
+
+		const response = await api.get(`/repos/${owner}/${repo}/collaborators`);
+
+		if (response.status === 200) {
+			const collaborators = response.data;
+			if (collaborators.length > 0) {
+				console.log(chalk.green(`Collaborators for repository '${repo}':`));
+				collaborators.forEach((collaborator) => {
+					console.log(chalk.blue(collaborator.login));
+				});
+			} else {
+				console.log(
+					chalk.yellow(`No collaborators found for repository '${repo}'.`)
+				);
+			}
+		}
+	} catch (error) {
+		if (error.response) {
+			console.error(chalk.red(`Error: ${error.response.data.message}`));
+		} else {
+			console.error(chalk.red(`Error: ${error.message}`));
+		}
+	}
+};
+
+export const listBranches = async () => {
+	try {
+		const answers = await inquirer.prompt([
+			{
+				name: "owner",
+				message: "Enter the GitHub username (owner of the repository):",
+				validate: (input) => (input ? true : "Owner username is required."),
+			},
+			{
+				name: "repo",
+				message: "Enter the repository name:",
+				validate: (input) => (input ? true : "Repository name is required."),
+			},
+		]);
+
+		const { owner, repo } = answers;
+
+		const response = await api.get(`/repos/${owner}/${repo}/branches`);
+
+		if (response.status === 200) {
+			const branches = response.data;
+			if (branches.length > 0) {
+				console.log(chalk.green(`Branches for repository '${repo}':`));
+				branches.forEach((branch) => {
+					console.log(chalk.blue(branch.name));
+				});
+			} else {
+				console.log(
+					chalk.yellow(`No branches found for repository '${repo}'.`)
+				);
+			}
+		}
+	} catch (error) {
+		if (error.response) {
+			console.error(chalk.red(`Error: ${error.response.data.message}`));
+		} else {
+			console.error(chalk.red(`Error: ${error.message}`));
+		}
+	}
+};
+export const createBranch = async () => {
+	try {
+		const answers = await inquirer.prompt([
+			{
+				name: "owner",
+				message: "Enter the GitHub username (owner of the repository):",
+				validate: (input) => (input ? true : "Owner username is required."),
+			},
+			{
+				name: "repo",
+				message: "Enter the repository name:",
+				validate: (input) => (input ? true : "Repository name is required."),
+			},
+			{
+				name: "branch",
+				message: "Enter the name of the new branch:",
+				validate: (input) => (input ? true : "Branch name is required."),
+			},
+			{
+				name: "baseBranch",
+				message:
+					"Enter the name of the base branch to create the new branch from (e.g., 'main' or 'master'):",
+				validate: (input) => (input ? true : "Base branch name is required."),
+			},
+		]);
+
+		const { owner, repo, branch, baseBranch } = answers;
+
+		const baseBranchResponse = await api.get(
+			`/repos/${owner}/${repo}/branches/${baseBranch}`
+		);
+		const baseBranchSha = baseBranchResponse.data.commit.sha;
+
+		const response = await api.post(`/repos/${owner}/${repo}/git/refs`, {
+			ref: `refs/heads/${branch}`,
+			sha: baseBranchSha,
+		});
+
+		if (response.status === 201) {
+			console.log(
+				chalk.green(
+					`Successfully created branch '${branch}' from '${baseBranch}' in repository '${repo}'.`
+				)
+			);
+		}
+	} catch (error) {
+		if (error.response) {
+			console.error(chalk.red(`Error: ${error.response.data.message}`));
+		} else {
+			console.error(chalk.red(`Error: ${error.message}`));
+		}
+	}
+};
+
+export const deleteBranch = async () => {
+	try {
+		const answers = await inquirer.prompt([
+			{
+				name: "owner",
+				message: "Enter the GitHub username (owner of the repository):",
+				validate: (input) => (input ? true : "Owner username is required."),
+			},
+			{
+				name: "repo",
+				message: "Enter the repository name:",
+				validate: (input) => (input ? true : "Repository name is required."),
+			},
+			{
+				name: "branch",
+				message: "Enter the branch name to delete:",
+				validate: (input) => (input ? true : "Branch name is required."),
+			},
+		]);
+
+		const { owner, repo, branch } = answers;
+
+		const refPath = `heads/${branch}`;
+
+		const response = await api.delete(
+			`/repos/${owner}/${repo}/git/refs/${refPath}`
+		);
+
+		if (response.status === 204) {
+			console.log(
+				chalk.green(
+					`Successfully deleted branch '${branch}' from repository '${repo}'.`
+				)
+			);
+		} else {
+			console.log(
+				chalk.yellow(
+					`Branch '${branch}' might not exist or could not be deleted.`
+				)
 			);
 		}
 	} catch (error) {

@@ -4,7 +4,6 @@ import { writeConfig, readConfig } from "../utils/config.js";
 import chalk from "chalk";
 import api from "../services/api.js";
 
-// Login command to store GitHub credentials
 export const login = async () => {
 	const { token } = await inquirer.prompt([
 		{
@@ -30,7 +29,6 @@ export const login = async () => {
 	}
 };
 
-// Logout command to remove GitHub credentials
 export const logout = async () => {
 	try {
 		const config = readConfig();
