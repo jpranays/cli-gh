@@ -2,6 +2,7 @@ import inquirer from "inquirer";
 import axios from "axios";
 import { writeConfig, readConfig } from "../utils/config.js";
 import chalk from "chalk";
+import api from "../services/api.js";
 
 // Login command to store GitHub credentials
 export const login = async () => {
@@ -14,7 +15,7 @@ export const login = async () => {
 	]);
 
 	try {
-		const response = await axios.get("https://api.github.com/user", {
+		const response = await api.get("/user", {
 			headers: { Authorization: `token ${token}` },
 		});
 
