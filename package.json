@@ -1,19 +1,29 @@
 {
-  "name": "cli-gh",
-  "version": "1.0.0",
-  "description": "",
-  "main": "cli.js",
-  "type": "module",
-  "bin": {
-    "ghc": "./bin/cli.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "axios": "^1.7.7",
-    "chalk": "^5.3.0",
-    "commander": "^12.1.0",
-    "inquirer": "^10.2.0"
-  }
+	"name": "cli-gh",
+	"version": "0.0.1",
+	"description": "",
+	"main": "cli.js",
+	"type": "module",
+	"bin": {
+		"ghc": "./bin/cli.js"
+	},
+	"keywords": [
+		"cli",
+		"github",
+		"github-cli",
+		"cli-gh"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jpranays/cli-gh.git"
+	},
+	"homepage": "https://jpranays.github.io/cli-gh/",
+	"author": "Pranay <pranay1315@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"axios": "^1.7.7",
+		"chalk": "^5.3.0",
+		"commander": "^12.1.0",
+		"inquirer": "^10.2.0"
+	}
 }
