@@ -1,0 +1,22 @@
+.heroBanner {
+	padding: 1rem 0;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	color: var(--ifm-color-primary);
+	background-color: var(--hero-baner-bg);
+	/* background: url(../../static/bg.svg) no-repeat center center; */
+	background-size: cover;
+}
+
+@media screen and (max-width: 996px) {
+	.heroBanner {
+		padding: 1rem;
+	}
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

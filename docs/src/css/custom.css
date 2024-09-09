@@ -1,0 +1,116 @@
+@import "font-awesome/css/font-awesome.min.css";
+:root {
+	--ifm-color-primary: #24292e; /* GitHub Black */
+	--ifm-color-primary-dark: #1b1f23; /* Darker Black */
+	--ifm-color-primary-light: #57606a; /* Gray */
+	--ifm-color-accent: #0366d6; /* GitHub Blue */
+	--ifm-color-background: #ffffff; /* White */
+	--ifm-color-highlighted-code-line-bg: rgba(255, 229, 100, 0.2); /* Yellow */
+	--hero-banner-bg: #f6f8fa; /* Light Gray */
+}
+
+[data-theme="dark"] {
+	--ifm-color-primary: #f0f0f0; /* Soft White */
+	--ifm-color-primary-dark: #e0e0e0; /* Lighter Gray */
+	--ifm-color-primary-light: #ffffff; /* Pure White */
+	--ifm-color-background: #0d1117; /* GitHub Dark */
+	--ifm-color-highlighted-code-line-bg: rgba(
+		240,
+		240,
+		240,
+		0.2
+	); /* Soft White Highlight */
+	--hero-banner-bg: #1c1f24; /* Darker Gray */
+}
+
+.navbar__items--right {
+	gap: 0.5rem;
+}
+.navbar__icon {
+	height: 2rem;
+	width: 2rem;
+}
+
+.navbar__github {
+	-webkit-tap-highlight-color: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	font-size: 1.7rem;
+	transition: background var(--ifm-transition-fast);
+}
+
+html[data-theme="light"] .navbar__github {
+	color: #000;
+}
+
+html[data-theme="dark"] .navbar__github {
+	color: #fff;
+}
+
+.navbar__github:hover {
+	background: var(--ifm-color-emphasis-200);
+}
+[data-theme="light"] .DocSearch {
+	/* --docsearch-primary-color: var(--ifm-color-primary); */
+	/* --docsearch-text-color: var(--ifm-font-color-base); */
+	--docsearch-muted-color: var(--ifm-color-secondary-darkest);
+	--docsearch-container-background: rgba(94, 100, 112, 0.7);
+	/* Modal */
+	--docsearch-modal-background: var(--ifm-color-secondary-lighter);
+	/* Search box */
+	--docsearch-searchbox-background: var(--ifm-color-secondary);
+	--docsearch-searchbox-focus-background: var(--ifm-color-white);
+	/* Hit */
+	--docsearch-hit-color: var(--ifm-font-color-base);
+	--docsearch-hit-active-color: var(--ifm-color-white);
+	--docsearch-hit-background: var(--ifm-color-white);
+	/* Footer */
+	--docsearch-footer-background: var(--ifm-color-white);
+}
+
+[data-theme="dark"] .DocSearch {
+	--docsearch-text-color: var(--ifm-font-color-base);
+	--docsearch-muted-color: var(--ifm-color-secondary-darkest);
+	--docsearch-container-background: rgba(47, 55, 69, 0.7);
+	/* Modal */
+	--docsearch-modal-background: var(--ifm-background-color);
+	/* Search box */
+	--docsearch-searchbox-background: var(--ifm-background-color);
+	--docsearch-searchbox-focus-background: var(--ifm-color-black);
+	/* Hit */
+	--docsearch-hit-color: var(--ifm-font-color-base);
+	--docsearch-hit-active-color: var(--ifm-color-white);
+	--docsearch-hit-background: var(--ifm-color-emphasis-100);
+	/* Footer */
+	--docsearch-footer-background: var(--ifm-background-surface-color);
+	--docsearch-key-gradient: linear-gradient(
+		-26.5deg,
+		var(--ifm-color-emphasis-200) 0%,
+		var(--ifm-color-emphasis-100) 100%
+	);
+}
+.DocSearch-Logo svg * {
+	fill: var(--ifm-color-primary);
+}
+.homepage-wrapper {
+	/* background: url(../../static/bg.svg) no-repeat center center; */
+	background-size: cover;
+}
+*::-webkit-scrollbar {
+	display: none;
+}
+.raindrop-container {
+	position: fixed;
+	inset: 0;
+	opacity: 0.2;
+}
+.navbar {
+	background-color: transparent;
+	box-shadow: none;
+}
+#canvas-bubbles{
+	position: fixed;
+	inset: 0;
+}
