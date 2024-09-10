@@ -1,12 +1,17 @@
 {
 	"name": "cli-gh",
-	"version": "0.0.1",
+	"version": "0.0.3",
 	"description": "A CLI tool to interact with Github",
 	"main": "cli.js",
 	"type": "module",
 	"bin": {
 		"ghc": "./bin/cli.js"
 	},
+	"files": [
+		"bin",
+		"config",
+		"src"
+	],
 	"keywords": [
 		"cli",
 		"github",
