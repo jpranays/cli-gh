@@ -1,7 +1,3 @@
-<h6>
-(Under Development)
-</h6>
-
 <h1>
     <a href="https://jpranays.github.io/cli-gh/">Github CLI - ghc<a>
 </h1>
@@ -49,14 +45,14 @@ npm install -g cli-gh
 
 ## Commands
 
-- **Authentication Commands**: Authenticate and log out with ease.
-- **Repository Commands**: Effortlessly manage your repositories.
-- **Issue Commands**: Handle issue management seamlessly.
-- **Pull Request Commands**: Streamline pull request workflows.
-- **Branch Commands**: Manage branches with precision.
-- **Collaborator Commands**: Control collaborator access efficiently.
-- **User Commands**: Manage and update your user profile.
+- [**Authentication Commands**](https://jpranays.github.io/cli-gh/docs/commands/Authentication/): Authenticate and log out with ease.
+- [**Repository Commands**](https://jpranays.github.io/cli-gh/docs/commands/Repository/): Effortlessly manage your repositories.
+- [**Issue Commands**](https://jpranays.github.io/cli-gh/docs/commands/Issue/): Handle issue management seamlessly.
+- [**Pull Request Commands**](https://jpranays.github.io/cli-gh/docs/commands/Pull%20Request/): Streamline pull request workflows.
+- [**Branch Commands**](https://jpranays.github.io/cli-gh/docs/commands/Branch/): Manage branches with precision.
+- [**Collaborator Commands**](https://jpranays.github.io/cli-gh/docs/commands/Collaborator/): Control collaborator access efficiently.
+- [**User Commands**](https://jpranays.github.io/cli-gh/docs/commands/User/): Manage and update your user profile.
 
 ## Documentation
 
-For detailed documentation and examples, visit the [GitHub repository](https://github.com/jpranays/cli-gh).
+For detailed documentation and examples, visit the [Doc-site](https://jpranays.github.io/cli-gh/).

@@ -1,6 +1,6 @@
 {
 	"name": "cli-gh",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "A CLI tool to interact with Github",
 	"main": "cli.js",
 	"type": "module",
