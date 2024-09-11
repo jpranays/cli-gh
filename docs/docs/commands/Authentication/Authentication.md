@@ -15,7 +15,7 @@ To use the commands listed below, you must first authenticate using the `ghc log
 
 :::warning
 
-While generating a token, ensure that you only select the necessary scopes required for the commands you intend to use. Avoid selecting unnecessary scopes to prevent unauthorized access to your GitHub account.
+Avoid selecting unnecessary scopes to prevent unauthorized access to your GitHub account.
 
 :::
 
