@@ -19,7 +19,7 @@
 
 🔒 **Secure Authentication**
 
-- Secure authentication via GitHub OAuth.
+- Secure authentication via GitHub PAT.
 
 📦 **Powerful commands**
 

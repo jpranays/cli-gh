@@ -17,7 +17,7 @@ const FeatureList: FeatureItem[] = [
 	{
 		emoji: "🔒",
 		title: "Secure Authentication",
-		description: <>Secure authentication via GitHub OAuth.</>,
+		description: <>Secure authentication via GitHub PAT.</>,
 	},
 	{
 		emoji: "📦",

@@ -3,8 +3,9 @@ sidebar_position: 1
 ---
 
 # Introduction
+---
 
-[**Cli-gh**](https://www.npmjs.com/package/cli-gh) is a simple and intuitive command-line tool for managing GitHub repositories, users, issues, and pull requests. It provides secure authentication via GitHub OAuth and powerful commands to make managing your GitHub workflow easier.
+[**Cli-gh**](https://www.npmjs.com/package/cli-gh) is a simple and intuitive command-line tool for managing GitHub repositories, users, issues, and pull requests. It provides secure authentication via GitHub PAT and powerful commands to make managing your GitHub workflow easier.
 
 ## Installation
 
