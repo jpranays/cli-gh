@@ -98,9 +98,7 @@ html[data-theme="dark"] .navbar__github {
 	/* background: url(../../static/bg.svg) no-repeat center center; */
 	background-size: cover;
 }
-*::-webkit-scrollbar {
-	display: none;
-}
+
 .raindrop-container {
 	position: fixed;
 	inset: 0;

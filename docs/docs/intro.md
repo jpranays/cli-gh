@@ -4,16 +4,84 @@ sidebar_position: 1
 
 # Introduction
 
-React Fast Hooks is a library that provides a set of hooks that are optimized for performance. The hooks are designed to be as fast as possible and to minimize the number of re-renders.
+[**Cli-gh**](https://www.npmjs.com/package/cli-gh) is a simple and intuitive command-line tool for managing GitHub repositories, users, issues, and pull requests. It provides secure authentication via GitHub OAuth and powerful commands to make managing your GitHub workflow easier.
 
 ## Installation
 
-Install [`react-fast-hooks`](https://www.npmjs.com/package/react-fast-hooks) using your preferred package manager.
+Install [`cli-gh`](https://www.npmjs.com/package/cli-gh) using your preferred package manager.
 
-```bash title="Using npm"
-npm install react-fast-hooks
+```bash
+npm install -g cli-gh
 ```
 
-```bash title="Using Yarn"
-yarn add react-fast-hooks
+## Usage
+
+After installing [`cli-gh`](https://www.npmjs.com/package/cli-gh), you can start using it to manage your GitHub workflow.
+
+Here are two ways to run the `ghc` command:
+
+### Using npx
+
+```bash
+npx cli-gh --help
 ```
+
+Run specific commands:
+
+```bash
+npx cli-gh <command> 
+```
+
+---------
+
+### Using global Installation
+
+To use `ghc` commands directly without `npx`, you need to link the package globally.
+
+#### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/jpranays/cli-gh.git
+```
+
+#### Step 2: Navigate to the Project Directory
+
+```bash
+cd cli-gh
+```
+
+#### Step 3: Install Dependencies
+
+```bash
+npm install
+```
+
+#### Step 4: Link the Package Globally
+
+```bash
+npm link
+```
+
+:::info
+
+This command creates a symbolic link in your system's global node_modules directory, allowing you to use **`ghc`** anywhere in your terminal.
+
+:::
+
+### Verify the Installation
+
+Run the following command to verify that `ghc` is recognized:
+
+```bash
+ghc --help
+```
+
+
+---
+
+:::warning[**Troubleshooting**]
+
+- **Command Not Found**: If you receive a "command not found" error after global installation, ensure that your system's PATH includes the directory where global npm packages are installed.
+- **Permission Issues**: You might need to run commands with `sudo` if you encounter permission errors during installation or linking.
+
+:::

@@ -63,8 +63,8 @@ const config: Config = {
 			],
 		},
 		prism: {
-			theme: prismThemes.vsDark,
-			darkTheme: prismThemes.vsDark,
+			theme: prismThemes.dracula,
+			darkTheme: prismThemes.dracula,
 		},
 	} satisfies Preset.ThemeConfig,
 };
