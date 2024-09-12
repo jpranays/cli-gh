@@ -104,11 +104,14 @@ html[data-theme="dark"] .navbar__github {
 	inset: 0;
 	opacity: 0.2;
 }
-.navbar {
-	background-color: transparent;
-	box-shadow: none;
-}
-#canvas-bubbles{
+#canvas-bubbles {
 	position: fixed;
 	inset: 0;
+}
+
+@media screen and (min-width: 425px) {
+	.navbar {
+		background-color: transparent;
+		box-shadow: none;
+	}
 }

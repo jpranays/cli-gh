@@ -12,12 +12,7 @@ function HomepageHeader() {
 	const { siteConfig } = useDocusaurusContext();
 	return (
 		<header className={clsx("hero hero--primary", styles.heroBanner)}>
-			<div
-				className="container"
-				style={{
-					marginTop: "-1rem",
-				}}
-			>
+			<div className="container">
 				<Heading as="h1" className="hero__title">
 					{siteConfig.title}
 				</Heading>
@@ -34,7 +29,7 @@ function HomepageHeader() {
 
 export default function Home(): JSX.Element {
 	const { siteConfig } = useDocusaurusContext();
-	
+
 	useCanvasAnimation("canvas-bubbles");
 
 	return (
