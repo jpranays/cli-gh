@@ -63,7 +63,7 @@ const config: Config = {
 			],
 		},
 		prism: {
-			theme: prismThemes.dracula,
+			theme: prismThemes.github,
 			darkTheme: prismThemes.dracula,
 		},
 	} satisfies Preset.ThemeConfig,

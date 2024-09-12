@@ -15,13 +15,13 @@ To use the commands listed below, you must first authenticate using the `ghc log
 
 :::warning
 
-Avoid selecting unnecessary scopes to prevent unauthorized access to your GitHub account.
+**Important:** Avoid selecting unnecessary scopes to prevent unauthorized access to your GitHub account.
 
 :::
 
-:::tip
+:::info
 
-You can always revoke a token if you suspect it has been compromised.
+**Note:** You can always revoke a token if you suspect it has been compromised.
 
 :::
 
@@ -29,15 +29,39 @@ You can always revoke a token if you suspect it has been compromised.
 
 Once you have your token, run the following command to authenticate with `ghc`:
 
+### For logging in
+
 ```bash
 ghc login
 ```
 
 The CLI will prompt you to enter your PAT. Paste the token you generated in Step 1.
+:::info
+
+**Note:** While pasting the token on the terminal, right-click on the terminal.
+
+:::
 
 Once authenticated, you will be able to access all the commands that require login.
 
-![ghc login](/gifs/login.gif)
+ ![ghc login](/gifs/login.gif)
+
+
+### For logging out
+
+To log out of your GitHub account, run the following command:
+
+```bash
+ghc logout
+```
+
+:::info
+
+This will remove the stored token and log you out of your GitHub account.
+
+:::
+
+ ![ghc logout](/gifs/logout.gif)
 
 --- 
 
