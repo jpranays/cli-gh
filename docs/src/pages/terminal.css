@@ -92,3 +92,9 @@ span[data-color="green"] {
 		opacity: 0;
 	}
 }
+@media screen and (max-width: 425px) {
+	#termynal {
+		font-size: 12px;
+		padding: 50px 0px 0px 15px;
+	}
+}

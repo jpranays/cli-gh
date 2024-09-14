@@ -15,6 +15,7 @@ const sidebars: SidebarsConfig = {
 				"commands/User/User",
 			],
 		},
+		"Troubleshooting & FAQs",
 	],
 };
 
