@@ -83,28 +83,28 @@ These commands perform actions that modify data or require access to private rep
 
 ### Pull Request Management
 
-- `pr-create` – Create a new pull request
-- `pr-merge` – Merge a pull request
+- [`pr-create`](/cli-gh/docs/commands/PullRequest/#pr-create) – Create a new pull request
+- [`pr-merge`](/cli-gh/docs/commands/PullRequest/#pr-merge) – Merge a pull request
 
 ### Branch Management
 
-- `branch-create` – Create a new branch
-- `branch-delete` – Delete a branch
+- [`branch-create`](/cli-gh/docs/commands/Branch/#branch-create) – Create a new branch
+- [`branch-delete`](/cli-gh/docs/commands/Branch/#branch-delete) – Delete a branch
 
 ### Issue Management
 
-- `issue-create` – Create a new issue for a GitHub repository
-- `issue-update` – Update an existing issue
-- `issue-close` – Close an issue
+- [`issue-create`](/cli-gh/docs/commands/Issue/#issue-create) – Create a new issue for a GitHub repository
+- [`issue-update`](/cli-gh/docs/commands/Issue/#issue-update) – Update an existing issue
+- [`issue-close`](/cli-gh/docs/commands/Issue/#issue-close) – Close an issue
 
 ### Collaborator Management
 
-- `add-collaborator` – Add a collaborator to a repository
-- `remove-collaborator` – Remove a collaborator from a repository
+- [`add-collaborator`](/cli-gh/docs/commands/Collaborator/#collaborator-add) – Add a collaborator to a repository
+- [`remove-collaborator`](/cli-gh/docs/commands/Collaborator/#collaborator-remove) – Remove a collaborator from a repository
 
 ### User Management
 
-- `user-update` – Update user information (self)
+- [`user-update`](/cli-gh/docs/commands/User/#user-update) – Update user information (self)
 
 -------------------------
 
@@ -114,36 +114,36 @@ These commands are used for fetching data or interacting with public resources, 
 
 :::warning
 
-**Note:** If api rate limit is exceeded, you will be prompted to [login](/cli-gh/docs/commands/Authentication/#login) to access the data.
+**Note:** If the API rate limit is exceeded, you will be prompted to [login](/cli-gh/docs/commands/Authentication/#login) to access the data.
 
 :::
 
 ### Repository Information
 
-- `repo-clone` – Clone a GitHub repository
-- `repo-info` – Get detailed information about a repository
-- `repo-actions` – List GitHub Actions for a repository
+- [`repo-clone`](/cli-gh/docs/commands/Repository/#repo-clone) – Clone a GitHub repository
+- [`repo-info`](/cli-gh/docs/commands/Repository/#repo-info) – Get detailed information about a repository
+- [`repo-actions`](/cli-gh/docs/commands/Repository/#repo-actions) – List GitHub Actions for a repository
 
 ### Issue Information
 
-- `issue-list` – List issues in a repository
-- `issue-info` – Get detailed information about an issue
+- [`issue-list`](/cli-gh/docs/commands/Issue/#issue-list) – List issues in a repository
+- [`issue-info`](/cli-gh/docs/commands/Issue/#issue-info) – Get detailed information about an issue
 
 ### Pull Request Information
 
-- `pr-list` – List pull requests for a repository
-- `pr-info` – Get details about a pull request
+- [`pr-list`](/cli-gh/docs/commands/PullRequest/#pr-list) – List pull requests for a repository
+- [`pr-info`](/cli-gh/docs/commands/PullRequest/#pr-info) – Get details about a pull request
 
 ### Branch Information
 
-- `branch-list` – List all branches in a repository
+- [`branch-list`](/cli-gh/docs/commands/Branch/#branch-list) – List all branches in a repository
 
 ### Collaborator Information
 
-- `collaborator-list` – List collaborators for a repository
+- [`collaborator-list`](/cli-gh/docs/commands/Collaborator/#collaborator-list) – List collaborators for a repository
 
 ### User Information
 
-- `user-info` – Get information about a GitHub user
+- [`user-info`](/cli-gh/docs/commands/User/#user-info) – Get information about a GitHub user
 
 ---

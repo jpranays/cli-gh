@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 @import "font-awesome/css/font-awesome.min.css";
 :root {
 	--ifm-color-primary: #24292e; /* GitHub Black */
@@ -21,6 +22,9 @@
 		0.2
 	); /* Soft White Highlight */
 	--hero-banner-bg: #1c1f24; /* Darker Gray */
+}
+body{
+	font-family: 'Open Sans', sans-serif;
 }
 
 .navbar__items--right {
