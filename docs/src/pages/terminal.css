@@ -95,6 +95,6 @@ span[data-color="green"] {
 @media screen and (max-width: 425px) {
 	#termynal {
 		font-size: 12px;
-		padding: 50px 0px 0px 15px;
+		padding: 50px 5px 5px 15px;
 	}
 }
