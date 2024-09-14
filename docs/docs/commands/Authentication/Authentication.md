@@ -83,8 +83,8 @@ These commands perform actions that modify data or require access to private rep
 
 ### Pull Request Management
 
-- [`pr-create`](/cli-gh/docs/commands/PullRequest/#pr-create) – Create a new pull request
-- [`pr-merge`](/cli-gh/docs/commands/PullRequest/#pr-merge) – Merge a pull request
+- [`pr-create`](/cli-gh/docs/commands/Pull%20Request/#pr-create) – Create a new pull request
+- [`pr-merge`](/cli-gh/docs/commands/Pull%20Request/#pr-merge) – Merge a pull request
 
 ### Branch Management
 
@@ -131,8 +131,8 @@ These commands are used for fetching data or interacting with public resources, 
 
 ### Pull Request Information
 
-- [`pr-list`](/cli-gh/docs/commands/PullRequest/#pr-list) – List pull requests for a repository
-- [`pr-info`](/cli-gh/docs/commands/PullRequest/#pr-info) – Get details about a pull request
+- [`pr-list`](/cli-gh/docs/commands/Pull%20Request/#pr-list) – List pull requests for a repository
+- [`pr-info`](/cli-gh/docs/commands/Pull%20Request/#pr-info) – Get details about a pull request
 
 ### Branch Information
 
