@@ -11,7 +11,7 @@
 
   This command allows you to add a user as a collaborator to your repository. You will be prompted to enter the username of the collaborator and the permission level you want to grant (e.g., `read`, `write`, `admin`).
 
-  <!-- ![ghc collaborator-add](/gifs/collaborator-add.gif) -->
+  ![ghc collaborator-add](/gifs/collaborator-add.gif)
 
 
 - ### **`collaborator-remove`**
@@ -30,7 +30,7 @@
 
   :::
 
-  <!-- ![ghc collaborator-remove](/gifs/collaborator-remove.gif) -->
+  ![ghc collaborator-remove](/gifs/collaborator-remove.gif)
 
 ---
 
@@ -44,6 +44,6 @@
 
   This command retrieves a list of all collaborators that have access to the specified repository. The permission levels (e.g., `read`, `write`, `admin`) for each collaborator are also shown.
 
-  <!-- ![ghc collaborator-list](/gifs/collaborator-list.gif) -->
+  ![ghc collaborator-list](/gifs/collaborator-list.gif)
 
 ---
