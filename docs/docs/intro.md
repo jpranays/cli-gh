@@ -30,7 +30,7 @@ npx cli-gh --help
 Run specific commands:
 
 ```bash
-npx cli-gh <command> 
+npx cli-gh <--command--> 
 ```
 
 ---------
