@@ -114,8 +114,8 @@ html[data-theme="dark"] .navbar__github {
 }
 
 @media screen and (min-width: 425px) {
-	.navbar {
+	/* .navbar {
 		background-color: transparent;
 		box-shadow: none;
-	}
+	} */
 }
