@@ -66,14 +66,6 @@ const config: Config = {
 			theme: prismThemes.github,
 			darkTheme: prismThemes.dracula,
 		},
-		announcementBar: {
-			id: "under-construction",
-			content:
-				'⚠️ This project is under construction. Please check back later for updates.',
-			backgroundColor: "#FFD700",
-			textColor: "#000",
-			isCloseable: false,
-		},
 	} satisfies Preset.ThemeConfig,
 };
 
