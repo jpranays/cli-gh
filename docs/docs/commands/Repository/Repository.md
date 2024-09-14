@@ -1,15 +1,9 @@
 
 ---
 
-:::warning
-
-Below are the commands that require user authentication. Make sure you have logged in using [`ghc login`](http://localhost:3001/cli-gh/docs/commands/Authentication/) to access these commands.
-
-:::
-
-### Repository Management
-
-- **`repo-list`** - List all GitHub repositories of the authenticated user.
+- ###  **`repo-list`** 
+  
+  Lists all GitHub repositories of the authenticated user.
   
   ```bash
   ghc repo-list 
@@ -20,7 +14,9 @@ Below are the commands that require user authentication. Make sure you have logg
   ![ghc repo-list](/gifs/repo-list.gif)
 
 
-- **`repo-create`** – Create a new GitHub repository.
+- ###  **`repo-create`** 
+  
+  Creates a new GitHub repository.
   
   ```bash
   ghc repo-create
@@ -31,7 +27,9 @@ Below are the commands that require user authentication. Make sure you have logg
   ![ghc repo-list](/gifs/repo-create.gif)
 
 
-- **`repo-update`** – Update an existing GitHub repository.
+- ###  **`repo-update`** 
+ 
+  Updates an existing GitHub repository.
   
   ```bash
   ghc repo-update
@@ -42,7 +40,9 @@ Below are the commands that require user authentication. Make sure you have logg
   ![ghc repo-update](/gifs/repo-update.gif)
 
 
-- **`repo-delete`** – Delete a GitHub repository.
+- ###  **`repo-delete`** 
+
+  Deletes a GitHub repository.
   
   ```bash
   ghc repo-delete
@@ -59,7 +59,9 @@ Below are the commands that require user authentication. Make sure you have logg
 
   :::
 
-- **`repo-star`** – Star a GitHub repository.
+- ###  **`repo-star`** 
+ 
+  Stars a GitHub repository.
   
   ```bash
   ghc repo-star 
@@ -70,7 +72,9 @@ Below are the commands that require user authentication. Make sure you have logg
   ![ghc repo-star](/gifs/repo-star.gif)
 
 
-- **`repo-unstar`** – Unstar a GitHub repository.
+- ###  **`repo-unstar`** 
+  
+  Unstars a GitHub repository.
   
   ```bash
   ghc repo-unstar 
@@ -80,7 +84,9 @@ Below are the commands that require user authentication. Make sure you have logg
 
   ![ghc repo-unstar](/gifs/repo-unstar.gif)
 
-- **`repo-fork`** – Fork a GitHub repository.
+- ###  **`repo-fork`** 
+
+  Forks a GitHub repository.
   
   ```bash
   ghc repo-fork 
@@ -91,7 +97,9 @@ Below are the commands that require user authentication. Make sure you have logg
   ![ghc repo-fork](/gifs/repo-fork.gif)
 
 
-- **`repo-traffic`** – Get traffic information for a GitHub repository.
+- ###  **`repo-traffic`**  
+
+  Gets traffic information for a GitHub repository.
   
   ```bash
   ghc repo-traffic 
@@ -104,15 +112,9 @@ Below are the commands that require user authentication. Make sure you have logg
 
 ---
 
-:::info
+- ###  **`repo-clone`**  
 
-Below commands fetch public data related to repositories and do not require authentication:
-
-:::
-
-### Repository Information
-
-- **`repo-clone`** – Clone a GitHub repository.
+  Clones a GitHub repository.
   
   ```bash
   ghc repo-clone 
@@ -129,7 +131,9 @@ Below commands fetch public data related to repositories and do not require auth
   ![ghc repo-clone](/gifs/repo-clone.gif)
 
 
-- **`repo-info`** – Get detailed information about a GitHub repository.
+- ###  **`repo-info`** 
+
+  Gets detailed information about a GitHub repository.
   
   ```bash
   ghc repo-info 
@@ -140,7 +144,9 @@ Below commands fetch public data related to repositories and do not require auth
   ![ghc repo-info](/gifs/repo-info.gif)
 
 
-- **`repo-actions`** – List GitHub Actions for a GitHub repository.
+- ###  **`repo-actions`** 
+
+  Lists GitHub Actions for a GitHub repository.
   
   ```bash
   ghc repo-actions 

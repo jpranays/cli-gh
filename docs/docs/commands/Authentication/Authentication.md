@@ -1,7 +1,9 @@
 
 ---
 
-To use the commands listed below, you must first authenticate using the `ghc login` command by providing a GitHub **Personal Access Token (PAT)**. Here’s how to generate and use a PAT:
+###  **`login`** 
+
+To access commands that require user authentication, you need to log in to your GitHub account using a Personal Access Token (PAT). Here's how you can do it:
 
 #### Step 1: Generate a Personal Access Token (PAT)
 
@@ -29,7 +31,6 @@ To use the commands listed below, you must first authenticate using the `ghc log
 
 Once you have your token, run the following command to authenticate with `ghc`:
 
-### For logging in
 
 ```bash
 ghc login
@@ -47,7 +48,7 @@ Once authenticated, you will be able to access all the commands that require log
  ![ghc login](/gifs/login.gif)
 
 
-### For logging out
+###  **`logout`** 
 
 To log out of your GitHub account, run the following command:
 
@@ -71,13 +72,14 @@ These commands perform actions that modify data or require access to private rep
 
 ### Repository Management
 
-- `repo-create` – Create a new GitHub repository
-- `repo-update` – Update a GitHub repository
-- `repo-delete` – Delete a GitHub repository
-- `repo-star` – Star a GitHub repository
-- `repo-unstar` – Unstar a GitHub repository
-- `repo-fork` – Fork a GitHub repository
-- `repo-traffic` – Get traffic statistics for a GitHub repository
+- [`repo-list`](/cli-gh/docs/commands/Repository/#repo-list) – List public repositories for a user
+- [`repo-create`](/cli-gh/docs/commands/Repository/#repo-create) – Create a new GitHub repository
+- [`repo-update`](/cli-gh/docs/commands/Repository/#repo-update) – Update a GitHub repository
+- [`repo-delete`](/cli-gh/docs/commands/Repository/#repo-delete) – Delete a GitHub repository
+- [`repo-star`](/cli-gh/docs/commands/Repository/#repo-star) – Star a GitHub repository
+- [`repo-unstar`](/cli-gh/docs/commands/Repository/#repo-unstar) – Unstar a GitHub repository
+- [`repo-fork`](/cli-gh/docs/commands/Repository/#repo-fork) – Fork a GitHub repository
+- [`repo-traffic`](/cli-gh/docs/commands/Repository/#repo-traffic) – Get traffic statistics for a GitHub repository
 
 ### Pull Request Management
 
@@ -86,8 +88,8 @@ These commands perform actions that modify data or require access to private rep
 
 ### Branch Management
 
-- `create-branch` – Create a new branch
-- `delete-branch` – Delete a branch
+- `branch-create` – Create a new branch
+- `branch-delete` – Delete a branch
 
 ### Issue Management
 
@@ -110,16 +112,21 @@ These commands perform actions that modify data or require access to private rep
 
 These commands are used for fetching data or interacting with public resources, and do not require authentication:
 
+:::warning
+
+**Note:** If api rate limit is exceeded, you will be prompted to [login](/cli-gh/docs/commands/Authentication/#login) to access the data.
+
+:::
+
 ### Repository Information
 
-- `repo-list` – List public repositories for a user
 - `repo-clone` – Clone a GitHub repository
 - `repo-info` – Get detailed information about a repository
 - `repo-actions` – List GitHub Actions for a repository
 
 ### Issue Information
 
-- `repo-issues` – List issues in a repository
+- `issue-list` – List issues in a repository
 - `issue-info` – Get detailed information about an issue
 
 ### Pull Request Information
@@ -129,11 +136,11 @@ These commands are used for fetching data or interacting with public resources, 
 
 ### Branch Information
 
-- `branches` – List all branches in a repository
+- `branch-list` – List all branches in a repository
 
 ### Collaborator Information
 
-- `collaborators` – List collaborators for a repository
+- `collaborator-list` – List collaborators for a repository
 
 ### User Information
 

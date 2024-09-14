@@ -103,7 +103,7 @@ program
 
 // Issue Commands
 program
-    .command("repo-issues")
+    .command("issue-list")
     .description("List issues for a GitHub repository")
     .action(listRepositoryIssues);
 
@@ -150,33 +150,33 @@ program
 
 // Branch Commands
 program
-    .command("branches")
+    .command("branch-list")
     .description("List branches for a GitHub repository")
     .action(listBranches);
 
 program
-    .command("create-branch")
+    .command("branch-create")
     .description("Create a new branch for a GitHub repository")
     .action(createBranch);
 
 program
-    .command("delete-branch")
+    .command("branch-delete")
     .description("Delete a branch from a GitHub repository")
     .action(deleteBranch);
 
 // Collaborator Commands
 program
-    .command("collaborators")
+    .command("collaborator-list")
     .description("List collaborators for a GitHub repository")
     .action(listCollaborators);
 
 program
-    .command("add-collaborator")
+    .command("collaborator-add")
     .description("Add a collaborator to a GitHub repository")
     .action(addCollaborator);
 
 program
-    .command("remove-collaborator")
+    .command("collaborator-remove")
     .description("Remove a collaborator from a GitHub repository")
     .action(removeCollaborator);
 
