@@ -9,7 +9,7 @@
   ghc user-info
   ```
 
-  This command fetches details about a GitHub user, including their username, bio, public repositories, and other relevant information. By default, it fetches the authenticated user's details.
+  This command fetches details about a GitHub user, including their username, bio, public repositories, and other relevant information.
 
   ![ghc user-info](/gifs/user-info.gif)
 

@@ -33,12 +33,12 @@ const config: Config = {
 	],
 
 	themeConfig: {
-		algolia: {
-			apiKey: "3012a81621acdbbb5fc663277d5d013e",
-			appId: "1F8174QBLL",
-			indexName: "jpranaysio",
-			contextualSearch: true,
-		},
+		// algolia: {
+		// 	apiKey: "3012a81621acdbbb5fc663277d5d013e",
+		// 	appId: "1F8174QBLL",
+		// 	indexName: "jpranaysio",
+		// 	contextualSearch: true,
+		// },
 		colorMode: {
 			defaultMode: "dark",
 			disableSwitch: false,
