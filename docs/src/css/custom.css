@@ -94,6 +94,7 @@ html[data-theme="dark"] .navbar__github {
 		var(--ifm-color-emphasis-200) 0%,
 		var(--ifm-color-emphasis-100) 100%
 	);
+	--docsearch-highlight-color: var(--ifm-color-emphasis-200);
 }
 .DocSearch-Logo svg * {
 	fill: var(--ifm-color-primary);
