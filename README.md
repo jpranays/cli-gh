@@ -1,6 +1,11 @@
-<h1>
+<h1 align="center">
     <a href="https://jpranays.github.io/cli-gh/">Github CLI - ghc<a>
 </h1>
+
+
+![ghc intro](./docs/static/gifs/GITHUB-CLI-INTO.gif)
+
+
 <p>
   <a href="https://github.com/jpranays/cli-gh"><img src="https://img.shields.io/badge/-GitHub-323232?style=flat&logo=github&logoColor=white"/></a>
   <a href="https://npmjs.org/package/cli-gh"><img src="https://img.shields.io/badge/-NPM-bb2222?style=flat&logo=npm"/></a>
