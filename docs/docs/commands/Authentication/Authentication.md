@@ -7,11 +7,13 @@ To access commands that require user authentication, you need to log in to your 
 
 #### Step 1: Generate a Personal Access Token (PAT)
 
-1. Log in to your GitHub account and go to [**Settings**](https://github.com/settings/).
-2. In the sidebar, click on [**Developer settings**](https://github.com/settings/apps).
-3. Click on **Personal access tokens** and then select [**Tokens (classic)**](https://github.com/settings/tokens).
+Here it is with underline for **Settings**:
+
+1. Log in to your GitHub account and go to [<u>**Settings**</u>](https://github.com/settings/).
+2. In the sidebar, click on [<u>**Developer settings**</u>](https://github.com/settings/apps).
+3. Click on **Personal access tokens** and then select [<u>**Tokens (classic)**</u>](https://github.com/settings/tokens).
 4. Click the **Generate new token** button.
-5. Give your token a descriptive name and select the necessary scopes for your CLI tool (such as `repo`, `read:org`, and `user`).
+5. Give your token a descriptive name and select the necessary scopes (such as `repo`, `read:org`, and `user`).
 6. Scroll down and click **Generate token**.
 7. Copy the generated token.
 
