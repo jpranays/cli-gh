@@ -2,11 +2,12 @@
     <a href="https://jpranays.github.io/cli-gh/">Github CLI - ghc<a>
 </h1>
 
+<p align="center">
+    <img src="./docs/static/gifs/GITHUB-CLI-INTO.gif" alt="Github-CLI"/>
+</p>
 
-![ghc intro](./docs/static/gifs/GITHUB-CLI-INTO.gif)
 
-
-<p>
+<p align="center">
   <a href="https://github.com/jpranays/cli-gh"><img src="https://img.shields.io/badge/-GitHub-323232?style=flat&logo=github&logoColor=white"/></a>
   <a href="https://npmjs.org/package/cli-gh"><img src="https://img.shields.io/badge/-NPM-bb2222?style=flat&logo=npm"/></a>
   <a href="https://npmcharts.com/compare/cli-gh?minimal=true"><img src="https://img.shields.io/npm/dw/cli-gh.svg?label=Downloads" alt="NPM Downloads"/></a>
@@ -14,7 +15,7 @@
   <a href="https://jpranays.github.io/cli-gh/"><img src="https://img.shields.io/badge/Docs-blue" alt="DOCS"></a>  
 </p>
 
-<p>Command the power of GitHub from your terminal with cross-platform versatility, seamless integration.</p>
+<p align="center">Command the power of GitHub from your terminal with cross-platform versatility, seamless integration.</p>
 
 ## Features
 
