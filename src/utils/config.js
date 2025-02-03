@@ -5,7 +5,7 @@ import os from 'os';
 // Get the user's home directory
 const homeDir = os.homedir();
 // Define the path to the config file in a hidden directory within the home directory
-const configDir = path.join(homeDir, '.gh-easy-cli');
+const configDir = path.join(homeDir, '.cli-gh');
 const configPath = path.join(configDir, 'config.json');
 
 // Ensure the config directory exists
