@@ -16,7 +16,9 @@
 		"cli",
 		"github",
 		"github-cli",
-		"cli-gh"
+		"cli-gh",
+		"git",
+		"git-cli"
 	],
 	"repository": {
 		"type": "git",
