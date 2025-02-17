@@ -17,7 +17,7 @@
 
 <p align="center">Command the power of GitHub from your terminal with cross-platform versatility, seamless integration.</p>
 
-## Features
+## Features 
 
 🛠️ **Simple and Intuitive**
 
