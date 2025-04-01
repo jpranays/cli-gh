@@ -7,7 +7,7 @@
 </p> 
 
 
-<p align="center">
+<p align="center"> 
   <a href="https://github.com/jpranays/cli-gh"><img src="https://img.shields.io/badge/-GitHub-323232?style=flat&logo=github&logoColor=white"/></a>
   <a href="https://npmjs.org/package/cli-gh"><img src="https://img.shields.io/badge/-NPM-bb2222?style=flat&logo=npm"/></a>
   <a href="https://npmcharts.com/compare/cli-gh?minimal=true"><img src="https://img.shields.io/npm/dw/cli-gh.svg?label=Downloads" alt="NPM Downloads"/></a>
