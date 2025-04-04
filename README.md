@@ -1,4 +1,4 @@
-<h1 align="center">
+<h1 align="center"> 
     <a href="https://jpranays.github.io/cli-gh/">Github CLI - ghc<a>
 </h1>
  
