@@ -7,8 +7,6 @@ To access commands that require user authentication, you need to log in to your 
 
 #### Step 1: Generate a Personal Access Token (PAT)
 
-Here it is with underline for **Settings**:
-
 1. Log in to your GitHub account and go to [<u>**Settings**</u>](https://github.com/settings/).
 2. In the sidebar, click on [<u>**Developer settings**</u>](https://github.com/settings/apps).
 3. Click on **Personal access tokens** and then select [<u>**Tokens (classic)**</u>](https://github.com/settings/tokens).
@@ -85,30 +83,30 @@ These commands perform actions that modify data or require access to private rep
 
 ### Pull Request Management
 
-- [`pr-create`](/cli-gh/docs/commands/Pull%20Request/#pr-create) – Create a new pull request
-- [`pr-merge`](/cli-gh/docs/commands/Pull%20Request/#pr-merge) – Merge a pull request
+- <u>[`pr-create`](/cli-gh/docs/commands/Pull%20Request/#pr-create)</u> – Create a new pull request
+- <u>[`pr-merge`](/cli-gh/docs/commands/Pull%20Request/#pr-merge)</u> – Merge a pull request
 
 ### Branch Management
 
-- [`branch-create`](/cli-gh/docs/commands/Branch/#branch-create) – Create a new branch
-- [`branch-delete`](/cli-gh/docs/commands/Branch/#branch-delete) – Delete a branch
+- <u>[`branch-create`](/cli-gh/docs/commands/Branch/#branch-create)</u> – Create a new branch
+- <u>[`branch-delete`](/cli-gh/docs/commands/Branch/#branch-delete)</u> – Delete a branch
 
 ### Issue Management
 
-- [`issue-create`](/cli-gh/docs/commands/Issue/#issue-create) – Create a new issue for a GitHub repository
-- [`issue-update`](/cli-gh/docs/commands/Issue/#issue-update) – Update an existing issue
-- [`issue-close`](/cli-gh/docs/commands/Issue/#issue-close) – Close an issue
+- <u>[`issue-create`](/cli-gh/docs/commands/Issue/#issue-create)</u> – Create a new issue for a GitHub repository
+- <u>[`issue-update`](/cli-gh/docs/commands/Issue/#issue-update)</u> – Update an existing issue
+- <u>[`issue-close`](/cli-gh/docs/commands/Issue/#issue-close)</u> – Close an issue
 
 ### Collaborator Management
 
-- [`add-collaborator`](/cli-gh/docs/commands/Collaborator/#collaborator-add) – Add a collaborator to a repository
-- [`remove-collaborator`](/cli-gh/docs/commands/Collaborator/#collaborator-remove) – Remove a collaborator from a repository
+- <u>[`collaborator-add`](/cli-gh/docs/commands/Collaborator/#collaborator-add)</u> – Add a collaborator to a repository
+- <u>[`collaborator-remove`](/cli-gh/docs/commands/Collaborator/#collaborator-remove)</u> – Remove a collaborator from a repository
 
 ### User Management
 
-- [`user-update`](/cli-gh/docs/commands/User/#user-update) – Update user information (self)
+- <u>[`user-update`](/cli-gh/docs/commands/User/#user-update)</u> – Update user information (self)
 
--------------------------
+---
 
 ## Commands That **Do Not Require Login** 🔓
 
@@ -122,30 +120,30 @@ These commands are used for fetching data or interacting with public resources, 
 
 ### Repository Information
 
-- [`repo-clone`](/cli-gh/docs/commands/Repository/#repo-clone) – Clone a GitHub repository
-- [`repo-info`](/cli-gh/docs/commands/Repository/#repo-info) – Get detailed information about a repository
-- [`repo-actions`](/cli-gh/docs/commands/Repository/#repo-actions) – List GitHub Actions for a repository
+- <u>[`repo-clone`](/cli-gh/docs/commands/Repository/#repo-clone)</u> – Clone a GitHub repository
+- <u>[`repo-info`](/cli-gh/docs/commands/Repository/#repo-info)</u> – Get detailed information about a repository
+- <u>[`repo-actions`](/cli-gh/docs/commands/Repository/#repo-actions)</u> – List GitHub Actions for a repository
 
 ### Issue Information
 
-- [`issue-list`](/cli-gh/docs/commands/Issue/#issue-list) – List issues in a repository
+- <u>[`issue-list`](/cli-gh/docs/commands/Issue/#issue-list)</u> – List issues in a repository
 - [`issue-info`](/cli-gh/docs/commands/Issue/#issue-info) – Get detailed information about an issue
 
 ### Pull Request Information
 
-- [`pr-list`](/cli-gh/docs/commands/Pull%20Request/#pr-list) – List pull requests for a repository
-- [`pr-info`](/cli-gh/docs/commands/Pull%20Request/#pr-info) – Get details about a pull request
+- <u>[`pr-list`](/cli-gh/docs/commands/Pull%20Request/#pr-list)</u> – List pull requests for a repository
+- <u>[`pr-info`](/cli-gh/docs/commands/Pull%20Request/#pr-info)</u> – Get details about a pull request
 
 ### Branch Information
 
-- [`branch-list`](/cli-gh/docs/commands/Branch/#branch-list) – List all branches in a repository
+- <u>[`branch-list`](/cli-gh/docs/commands/Branch/#branch-list)</u> – List all branches in a repository
 
 ### Collaborator Information
 
-- [`collaborator-list`](/cli-gh/docs/commands/Collaborator/#collaborator-list) – List collaborators for a repository
+- <u>[`collaborator-list`](/cli-gh/docs/commands/Collaborator/#collaborator-list)</u> – List collaborators for a repository
 
 ### User Information
 
-- [`user-info`](/cli-gh/docs/commands/User/#user-info) – Get information about a GitHub user
+- <u>[`user-info`](/cli-gh/docs/commands/User/#user-info)</u> – Get information about a GitHub user
 
 ---
