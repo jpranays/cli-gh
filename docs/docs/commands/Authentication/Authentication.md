@@ -74,14 +74,14 @@ These commands perform actions that modify data or require access to private rep
 
 ### Repository Management
 
-- [`repo-list`](/cli-gh/docs/commands/Repository/#repo-list) – List public repositories for a user
-- [`repo-create`](/cli-gh/docs/commands/Repository/#repo-create) – Create a new GitHub repository
-- [`repo-update`](/cli-gh/docs/commands/Repository/#repo-update) – Update a GitHub repository
-- [`repo-delete`](/cli-gh/docs/commands/Repository/#repo-delete) – Delete a GitHub repository
-- [`repo-star`](/cli-gh/docs/commands/Repository/#repo-star) – Star a GitHub repository
-- [`repo-unstar`](/cli-gh/docs/commands/Repository/#repo-unstar) – Unstar a GitHub repository
-- [`repo-fork`](/cli-gh/docs/commands/Repository/#repo-fork) – Fork a GitHub repository
-- [`repo-traffic`](/cli-gh/docs/commands/Repository/#repo-traffic) – Get traffic statistics for a GitHub repository
+- <u>[`repo-list`](/cli-gh/docs/commands/Repository/#repo-list)</u> – List public repositories for a user
+- <u>[`repo-create`](/cli-gh/docs/commands/Repository/#repo-create)</u> – Create a new GitHub repository
+- <u>[`repo-update`](/cli-gh/docs/commands/Repository/#repo-update)</u> – Update a GitHub repository
+- <u>[`repo-delete`](/cli-gh/docs/commands/Repository/#repo-delete)</u> – Delete a GitHub repository
+- <u>[`repo-star`](/cli-gh/docs/commands/Repository/#repo-star)</u> – Star a GitHub repository
+- <u>[`repo-unstar`](/cli-gh/docs/commands/Repository/#repo-unstar)</u> – Unstar a GitHub repository
+- <u>[`repo-fork`](/cli-gh/docs/commands/Repository/#repo-fork)</u> – Fork a GitHub repository
+- <u>[`repo-traffic`](/cli-gh/docs/commands/Repository/#repo-traffic)</u> – Get traffic statistics for a GitHub repository
 
 ### Pull Request Management
 
