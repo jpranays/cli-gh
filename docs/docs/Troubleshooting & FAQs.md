@@ -7,7 +7,7 @@
 This error typically occurs if your GitHub credentials are incorrect or expired.
 
 **Solution:**  
-- Run the [`ghc logout`](/cli-gh/docs/commands/Authentication/#logout) command and then [`ghc login`](/cli-gh/docs/commands/Authentication/#login) again to refresh your credentials.
+- Run the <u>[`ghc logout`](/cli-gh/docs/commands/Authentication/#logout)</u> command and then <u>[`ghc login`](/cli-gh/docs/commands/Authentication/#login)</u> again to refresh your credentials.
 - Double-check your GitHub credentials and make sure they are correct.
 
 ---
@@ -27,10 +27,10 @@ This error typically occurs if your GitHub credentials are incorrect or expired.
 ### 3. How do I resolve API rate limit issues?
 
 **Cause:**  
-You might encounter rate limits when making many [unauthenticated API requests](/cli-gh/docs/commands/Authentication/#commands-that-do-not-require-login-).
+You might encounter rate limits when making many <u>[unauthenticated API requests](/cli-gh/docs/commands/Authentication/#commands-that-do-not-require-login-)</u>.
 
 **Solution:**  
-To bypass this, you should log in using [`ghc login`](/cli-gh/docs/commands/Authentication/#login) to authenticate your requests. Authenticated users have a higher rate limit.
+To bypass this, you should log in using <u>[`ghc login`](/cli-gh/docs/commands/Authentication/#login)</u> to authenticate your requests. Authenticated users have a higher rate limit.
 
 ---
 
@@ -40,7 +40,7 @@ To bypass this, you should log in using [`ghc login`](/cli-gh/docs/commands/Auth
 
 ---
 
-### 5. Why is `repo-clone` not working?
+### 5. Why is <u>[`repo-clone`](/cli-gh/docs/commands/Repository/#repo-clone)</u> not working?
 
 **Cause:**  
 This could happen if the repository is private, or you do not have the correct access permissions.
@@ -53,7 +53,7 @@ Make sure you are logged and have access to the repository you're trying to clon
 ### 6. How can I reset my GitHub credentials?
 
 **Solution:**  
-To reset your credentials, simply run [`ghc logout`](/cli-gh/docs/commands/Authentication/#logout) followed by [`ghc login`](/cli-gh/docs/commands/Authentication/#login).
+To reset your credentials, simply run <u>[`ghc logout`](/cli-gh/docs/commands/Authentication/#logout)</u> followed by <u>[`ghc login`](/cli-gh/docs/commands/Authentication/#login)</u>.
 
 ---
 
@@ -64,7 +64,7 @@ The repository you're trying to access may have been deleted, made private, or y
 
 **Solution:**  
 - Check if the repository exists and is public.
-- If it's private, ensure you have the right permissions and are logged in with [`ghc login`](/cli-gh/docs/commands/Authentication/#login).
+- If it's private, ensure you have the right permissions and are logged in with <u>[`ghc login`](/cli-gh/docs/commands/Authentication/#login)</u>.
 - Double-check the repository name and user.
 
 ---
@@ -83,7 +83,7 @@ This will display detailed usage instructions for the command.
 
 ### 9. Can I contribute to the development of this CLI?
 
-Yes! Feel free to open an issue or a pull request on the [GitHub repo](https://github.com/jpranays/cli-gh).
+Yes! Feel free to open an issue or a pull request on the <u>[GitHub repo](https://github.com/jpranays/cli-gh)</u>.
 
 
 ---
