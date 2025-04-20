@@ -110,7 +110,7 @@ function HomepageHeader() {
 				<p className="hero__subtitle">{siteConfig.tagline}</p>
 				<GHCli />
 				<div className={styles.buttons}>
-					<Link className="button button--primary button--lg" to="/docs/intro">
+					<Link className="button button--secondary button--lg custom-btn" to="/docs/intro">
 						See all commands
 					</Link>
 				</div>

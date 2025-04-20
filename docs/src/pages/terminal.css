@@ -98,3 +98,27 @@ span[data-color="green"] {
 		padding: 50px 5px 5px 15px;
 	}
 }
+
+.custom-btn {
+	animation: bg 8s ease-in-out infinite alternate-reverse;
+	box-shadow: 0 0 10px 0px #a2a2a2;
+	background: linear-gradient(to right, #fa383e, #00a400, #ffba00);
+	background-size: 200% 200%;
+	color: #fff !important;
+	font-weight: 600;
+}
+
+@keyframes bg {
+	0% {
+		background-position: 0% 50%;
+		color: #fff !important;
+	}
+	50% {
+		background-position: 100% 50%;
+		color: #fff !important;
+	}
+	100% {
+		background-position: 0% 50%;
+		color: #fff !important;
+	}
+}
