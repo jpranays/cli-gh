@@ -122,3 +122,11 @@ span[data-color="green"] {
 		color: #fff !important;
 	}
 }
+.custom-hero-title {
+	animation: bg 8s ease-in-out infinite alternate-reverse;
+	background: linear-gradient(45deg, #fa383e, #00a400, #ffba00);
+	background-size: 200% 200%;
+	font-size: 72px;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
