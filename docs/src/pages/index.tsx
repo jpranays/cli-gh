@@ -134,16 +134,16 @@ function GHCli() {
 				ghc repo-create
 			</span>
 			<span data-ty="input" data-ty-prompt="?" data-color="white">
-				Enter the repository name: Test-Repo
+				Enter the repository name: GHC-Repo
 			</span>
 			<span data-ty="input" data-ty-prompt="?" data-color="white">
-				Enter the repository description: This is a test repository
+				Enter the repository description: This repo is created from cli-gh.d
 			</span>
 			<span data-ty="input" data-ty-prompt="?" data-color="white">
 				Should the repository be private? (y/n): n
 			</span>
 			<span data-ty data-color="green">
-				Repository 'Test-Repo' created successfully!
+				Repository 'GHC-Repo' created successfully!
 			</span>
 		</div>
 	);
