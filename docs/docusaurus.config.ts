@@ -3,8 +3,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-	title: "Github-CLI",
-	tagline: "A CLI tool to interact with Github",
+	title: "GitHub CLI",
+	tagline: "A CLI tool to interact with GitHub",
 	favicon: "img/favicon.ico",
 
 	url: "https://jpranays.github.io",
@@ -45,7 +45,7 @@ const config: Config = {
 			respectPrefersColorScheme: true,
 		},
 		navbar: {
-			title: "Github-CLI",
+			title: "GitHub CLI",
 			items: [
 				{
 					type: "docSidebar",

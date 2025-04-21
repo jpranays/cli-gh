@@ -1,10 +1,10 @@
 <h1 align="center">  
-    <a href="https://jpranays.github.io/cli-gh/">Github CLI - ghc<a>
+    <a href="https://jpranays.github.io/cli-gh/">GitHub CLI - ghc<a>
 </h1>
  
  
 <p align="center">
-    <img src="./docs/static/gifs/GITHUB-CLI-INTO.gif" alt="Github-CLI"/>
+    <img src="./docs/static/gifs/GITHUB-CLI-INTO.gif" alt="GitHub-CLI"/>
 </p> 
 
 

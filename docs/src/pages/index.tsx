@@ -157,7 +157,7 @@ export default function Home(): JSX.Element {
 	return (
 		<Layout
 			title={`${siteConfig.title}`}
-			description="A CLI tool to interact with Github"
+			description="A CLI tool to interact with GitHub"
 			wrapperClassName="homepage-wrapper"
 		>
 			<canvas id="canvas-bubbles"></canvas>
