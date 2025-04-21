@@ -137,7 +137,7 @@ function GHCli() {
 				Enter the repository name: GHC-Repo
 			</span>
 			<span data-ty="input" data-ty-prompt="?" data-color="white">
-				Enter the repository description: This repo is created from cli-gh.d
+				Enter the repository description: This repo is created from cli-gh.
 			</span>
 			<span data-ty="input" data-ty-prompt="?" data-color="white">
 				Should the repository be private? (y/n): n
