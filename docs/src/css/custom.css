@@ -23,8 +23,8 @@
 	); /* Soft White Highlight */
 	--hero-banner-bg: #1c1f24; /* Darker Gray */
 }
-body{
-	font-family: 'Open Sans', sans-serif;
+body {
+	font-family: "Open Sans", sans-serif;
 }
 
 .navbar__items--right {
@@ -119,4 +119,8 @@ html[data-theme="dark"] .navbar__github {
 		background-color: transparent;
 		box-shadow: none;
 	} */
+}
+.buttonGroup_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module
+	button {
+	opacity: 0.5 !important
 }
