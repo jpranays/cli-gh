@@ -127,7 +127,7 @@ These commands are used for fetching data or interacting with public resources, 
 ### Issue Information
 
 - <u>[`issue-list`](/cli-gh/docs/commands/Issue/#issue-list)</u> – List issues in a repository
-- [`issue-info`](/cli-gh/docs/commands/Issue/#issue-info) – Get detailed information about an issue
+- <u>[`issue-info`](/cli-gh/docs/commands/Issue/#issue-info)</u> – Get detailed information about an issue
 
 ### Pull Request Information
 
