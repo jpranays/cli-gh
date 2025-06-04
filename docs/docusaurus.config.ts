@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
@@ -34,9 +36,9 @@ const config: Config = {
 
 	themeConfig: {
 		algolia: {
-			apiKey: "0c8cba9b8511b6b54357af0cd132ed74",
-			appId: "IGWQP76FT1",
-			indexName: "jpranaysio",
+			apiKey: process.env.ALGOLIA_API_KEY!,
+			appId: process.env.ALGOLIA_APP_ID!,
+			indexName: process.env.ALGOLIA_INDEX_NAME!,
 			contextualSearch: true,
 		},
 		colorMode: {
