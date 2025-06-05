@@ -4,7 +4,7 @@
  
  
 <p align="center">
-    <img src="./docs/static/gifs/GITHUB-CLI-INTO.gif" alt="GitHub-CLI"/>
+    <img src="./docs/static/gifs/GITHUB-CLI-INTO-DARK.gif" alt="GitHub-CLI"/>
 </p> 
 
 
