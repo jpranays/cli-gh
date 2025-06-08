@@ -124,7 +124,7 @@ html[data-theme="dark"] .navbar__github {
 	button,.clean-btn {
 	opacity: 0.5 !important
 }
-.algoliaLogoPathFill_node_modules-\@docusaurus-preset-classic-node_modules-\@docusaurus-theme-search-algolia-lib-theme-SearchPage-styles-module + path{
+.algoliaLogoPathFill_WdUC + path{
 	fill: var(--ifm-color-primary) !important;
 	& + path{
 		fill: var(--ifm-color-background) !important;
