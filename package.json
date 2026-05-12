@@ -1,11 +1,11 @@
 {
   "name": "cli-gh",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A powerful, extensible GitHub CLI platform for developers",
   "main": "cli.js",
   "type": "module",
   "bin": {
-    "ghc": "./bin/cli.js"
+    "ghc": "bin/cli.js"
   },
   "files": [
     "bin",
@@ -25,7 +25,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jpranays/cli-gh.git"
+    "url": "git+https://github.com/jpranays/cli-gh.git"
   },
   "homepage": "https://jpranays.github.io/cli-gh/",
   "author": "Pranay <pranay1315@gmail.com>",
