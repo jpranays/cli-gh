@@ -9,7 +9,6 @@
   },
   "files": [
     "bin",
-    "config",
     "src"
   ],
   "engines": {
