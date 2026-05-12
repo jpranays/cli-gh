@@ -1,30 +1,81 @@
-import fs from 'fs';
-import path from 'path';
-import os from 'os';
+import fs from 'node:fs';
+import path from 'node:path';
+import os from 'node:os';
+import { encrypt, decrypt } from './crypto.js';
 
-// Get the user's home directory
-const homeDir = os.homedir();
-// Define the path to the config file in a hidden directory within the home directory
-const configDir = path.join(homeDir, '.cli-gh');
-const configPath = path.join(configDir, 'config.json');
+const CONFIG_DIR = path.join(os.homedir(), '.cli-gh');
+const CONFIG_FILE = path.join(CONFIG_DIR, 'config.json');
+const CONFIG_VERSION = 2;
 
-// Ensure the config directory exists
-const ensureConfigDir = () => {
-  if (!fs.existsSync(configDir)) {
-    fs.mkdirSync(configDir, { recursive: true });
+let _cache = null;
+
+function ensureDir() {
+  if (!fs.existsSync(CONFIG_DIR)) {
+    fs.mkdirSync(CONFIG_DIR, { recursive: true });
   }
-};
+}
 
-export const readConfig = () => {
-  ensureConfigDir();
-  if (fs.existsSync(configPath)) {
-    const data = fs.readFileSync(configPath, 'utf8');
-    return JSON.parse(data);
+export function readConfig() {
+  if (_cache) return _cache;
+
+  ensureDir();
+  if (!fs.existsSync(CONFIG_FILE)) return {};
+
+  try {
+    const raw = JSON.parse(fs.readFileSync(CONFIG_FILE, 'utf8'));
+
+    // Migrate v1 plaintext tokens to v2 encrypted format
+    if (raw.githubToken && !raw._version) {
+      raw.githubToken = encrypt(raw.githubToken);
+      raw._version = CONFIG_VERSION;
+      fs.writeFileSync(CONFIG_FILE, JSON.stringify(raw, null, 2), 'utf8');
+    }
+
+    _cache = raw;
+    return raw;
+  } catch {
+    return {};
   }
-  return {};
-};
+}
 
-export const writeConfig = (config) => {
-  ensureConfigDir();
-  fs.writeFileSync(configPath, JSON.stringify(config, null, 2), 'utf8');
-};
+export function writeConfig(data) {
+  ensureDir();
+  const existing = readConfig();
+  const merged = { ...existing, ...data, _version: CONFIG_VERSION };
+  _cache = merged;
+  fs.writeFileSync(CONFIG_FILE, JSON.stringify(merged, null, 2), 'utf8');
+}
+
+/** Returns the raw decrypted token, or null if not set. */
+export function getToken() {
+  const cfg = readConfig();
+  if (!cfg.githubToken) return null;
+  // Handle both encrypted (contains ':') and legacy plaintext formats
+  if (cfg.githubToken.includes(':')) {
+    return decrypt(cfg.githubToken);
+  }
+  return cfg.githubToken;
+}
+
+/** Stores the token encrypted. */
+export function setToken(token) {
+  writeConfig({ githubToken: encrypt(token) });
+  invalidateCache();
+}
+
+export function clearToken() {
+  const cfg = { ...readConfig() };
+  delete cfg.githubToken;
+  _cache = null;
+  ensureDir();
+  fs.writeFileSync(CONFIG_FILE, JSON.stringify(cfg, null, 2), 'utf8');
+}
+
+export function isAuthenticated() {
+  return Boolean(getToken());
+}
+
+/** Invalidate the in-memory config cache (call after login/logout). */
+export function invalidateCache() {
+  _cache = null;
+}
